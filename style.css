@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+    background-color: #fefaef !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-radius-card {
+    border-radius: 0.75rem !important;
+}
+
+.card-left {
+    width: 20% !important;
+    border-radius: 0.75rem !important;
+}
+
+.blue-bg {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.card-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: #27355c !important;
+    border-color: #27355c !important;
+}
