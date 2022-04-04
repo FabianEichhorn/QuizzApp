@@ -1,9 +1,9 @@
 let questions = [{
         'questions': 'Wie ist das Grundgerüst einer HTML Datei?',
-        'answer_1': '<HTML><HEAD><BODY></BODY></HEAD></HTML>',
-        'answer_2': '<HTML></HTML> ',
+        'answer_1': '&ltHTML&gt &ltHEAD&gt &ltBODY&gt &lt/BODY&gt &lt/HEAD&gt &lt/HTML&gt', // könnte auch <pre> text </pre> noch hinschreiben
+        'answer_2': '&ltHTML&gt &lt/HTML&gt ',
         'answer_3': 'gibt kein Grundgerüst',
-        'answer_4': '<HTML><HEAD></HEAD><BODY></BODY></HTML>',
+        'answer_4': '&ltHTML&gt &ltHEAD&gt &lt/HEAD&gt &ltBODY&gt &lt/BODY&gt &lt/HTML&gt',
         'right_answer': 4
     },
     {
@@ -32,10 +32,30 @@ let questions = [{
     },
     {
         'questions': 'Wie bindet man eine style.css Datei in eine HTML Datei ein?',
-        'answer_1': 'mit <link rel="stylesheet" href="style.css"> im body bereich',
+        'answer_1': 'mit &ltlink rel="stylesheet" href="style.css"&gt im body bereich',
         'answer_2': 'geht nur mit pHp',
-        'answer_3': 'mit <link rel="stylesheet" href="style.css"> im head bereich',
+        'answer_3': 'mit &ltlink rel="stylesheet" href="style.css"&gt im head bereich',
         'answer_4': 'mit !important',
         'right_answer': 3
     },
 ];
+
+
+let currentQuestion = 0;
+
+
+function init() {
+    showQuestion();
+    document.getElementById('all-questions').innerHTML = questions.length; // Anzahl der Fragen die beantwortet werden sollen mit der länge des JSONs angegeben
+}
+
+
+function showQuestion() {
+    let question = questions[currentQuestion];
+
+    document.getElementById('questiontext').innerHTML = question['questions'];
+    document.getElementById('answer_1').innerHTML = question['answer_1'];
+    document.getElementById('answer_2').innerHTML = question['answer_2'];
+    document.getElementById('answer_3').innerHTML = question['answer_3'];
+    document.getElementById('answer_4').innerHTML = question['answer_4'];
+}

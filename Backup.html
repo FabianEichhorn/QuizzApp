@@ -23,27 +23,27 @@
             <div class="col-md-8">
                 <div class="card-body" id="question-container">
 
-                    <h5 class="card-title" id="questiontext">Frage</h5>
+                    <h5 class="card-title">Frage</h5>
                     <div class="card mb-2">
-                        <div class="card-body" id="answer_1">
+                        <div class="card-body">
                             Antwort
                         </div>
                     </div>
 
                     <div class="card mb-2">
-                        <div class="card-body" id="answer_2">
+                        <div class="card-body">
                             Antwort
                         </div>
                     </div>
 
                     <div class="card mb-2">
-                        <div class="card-body" id="answer_3">
+                        <div class="card-body">
                             Antwort
                         </div>
                     </div>
 
                     <div class="card mb-2">
-                        <div class="card-body" id="answer_4">
+                        <div class="card-body">
                             Antwort
                         </div>
                     </div>
@@ -60,3 +60,43 @@
 </body>
 
 </html>
+
+<!-- function showQuestion() { (hat auch funktioniert)
+    let questionContainer = document.getElementById('question-container');
+    questionContainer.innerHTML = '';
+    for (let i = 0; i < questions.length; i++) {
+        const question = questions[i];
+        questionContainer.innerHTML += `
+                <h5 class="card-title">${question['questions']}</h5>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                        ${question['answer_1']}
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-body">
+                        ${question['answer_2']}
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-body">
+                        ${question['answer_3']}
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-body">
+                        ${question['answer_4']}
+                        </div>
+                    </div>
+                    <span> ${question['right_anwer']} </span>
+                    <div class="card-footer-bottom">
+                        <span> <b>1</b> von <b id="all-questions">5</b> Fragen</span>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                    </div>
+        `;
+
+    }
+} -->
