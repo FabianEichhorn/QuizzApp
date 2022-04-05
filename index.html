@@ -15,34 +15,36 @@
 </head>
 
 <body onload="init()">
-    <div class="card border-radius-card" style="max-width: 700px;">
+    <div class="card border-radius-card" style="width: 800px;">
         <div class="row g-0">
-            <div class="col-md-4 card-left">
-                <img class="blue-bg" src="./imgs/bluebg.png" alt="">
+            <div class="col-md-4 card-left blue-bg">
+                <img class="brain-logo" src="./imgs/logo.png" alt="">
+
             </div>
             <div class="col-md-8">
                 <div class="card-body" id="question-container">
 
                     <h5 class="card-title" id="questiontext">Frage</h5>
-                    <div class="card mb-2">
+
+                    <div class="card quiz-answer-cards mb-2" onclick="answer('answer_1')">
                         <div class="card-body" id="answer_1">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-cards mb-2" onclick="answer('answer_2')">
                         <div class="card-body" id="answer_2">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-cards mb-2" onclick="answer('answer_3')">
                         <div class="card-body" id="answer_3">
                             Antwort
                         </div>
                     </div>
 
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-cards mb-2" onclick="answer('answer_4')">
                         <div class="card-body" id="answer_4">
                             Antwort
                         </div>
@@ -50,7 +52,7 @@
 
                     <div class="card-footer-bottom">
                         <span> <b>1</b> von <b id="all-questions">5</b> Fragen</span>
-                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-primary" id="nex-button" disabled>Nächste Frage</button>
                     </div>
                 </div>
             </div>

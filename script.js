@@ -59,3 +59,21 @@ function showQuestion() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+
+
+function answer(selection) {
+    let question = questions[currentQuestion];
+    let selectedQuestionNumber = selection.slice(-1); // selection = "answer_3".slice(-1)
+
+    let idOfRightAnswer = `answer_${question['right_answer']}`; // damit gibt man in abhängigkeit der Frage an welche Antwort richtig ist (wichtig welche Antwort dann grün werden muss in der else abfrage)
+
+    if (selectedQuestionNumber == question['right_answer']) {
+        console.log('Richtige Antwort');
+        document.getElementById(selection).parentNode.classList.add('bg-success'); // warum ist hier (selection)? --> selection ist die Variable für die in der HTML datei stehenden komponenten (zb. bei der ersten Antwort function answer('answer_1'))
+    } else {
+        console.log('Falsche Antwort');
+        document.getElementById(selection).parentNode.classList.add('bg-danger'); // .parentNode gibt die classList auf das übergeordnete Element weiter. In dem Fall die Div mit der onclick answer() funktion
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
+    }
+    document.getElementById('nex-button').disabled = false; // button wird wieder enabled wenn man auf ne antwort klickt
+}
