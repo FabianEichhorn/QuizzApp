@@ -99,3 +99,12 @@ body {
 .progress {
     height: 0.75rem !important;
 }
+
+.mobile-header {
+    width: 100%;
+    background-color: #27355c;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+}
