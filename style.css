@@ -6,6 +6,10 @@ body {
     align-items: center;
 }
 
+.quiz-container {
+    width: 50vw;
+}
+
 .border-radius-card {
     border-radius: 0.75rem !important;
 }
@@ -51,6 +55,7 @@ body {
 
 .margin-rightside {
     margin-right: -6rem !important;
+    height: 100%;
 }
 
 
@@ -89,4 +94,8 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-top: 5rem;
+}
+
+.progress {
+    height: 0.75rem !important;
 }
