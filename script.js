@@ -118,6 +118,10 @@ function answer(selection) {
         AUDIO_FAIL.play();
     }
     document.getElementById('nex-button').disabled = false; // button wird wieder enabled wenn man auf ne antwort klickt
+    document.getElementById('answer_1').parentNode.classList.add('disable');
+    document.getElementById('answer_2').parentNode.classList.add('disable');
+    document.getElementById('answer_3').parentNode.classList.add('disable');
+    document.getElementById('answer_4').parentNode.classList.add('disable');
 }
 
 
@@ -131,6 +135,10 @@ function nextQuestion() {
     document.getElementById('nex-button').disabled = true;
     resetAnswerButtons();
     document.getElementById('current-question').innerHTML = currentQuestion + 1 // Frage wird unten links von 1 auf 2, 3, 4, 5 weiter gestellt
+    document.getElementById('answer_1').parentNode.classList.remove('disable');
+    document.getElementById('answer_2').parentNode.classList.remove('disable');
+    document.getElementById('answer_3').parentNode.classList.remove('disable');
+    document.getElementById('answer_4').parentNode.classList.remove('disable');
     showQuestion();
 
 }
